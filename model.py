@@ -103,6 +103,10 @@ class CommentAnalyzer:
 
     def load_model(self):
         """加载预训练模型"""
+        """模型下载地址
+        https://huggingface.co/hfl/chinese-roberta-wwm-ext/tree/main
+        下载 config.json pytorch_model.bin vocab.txt
+        """
         try:
             if self.config["local_model_path"]:
                 logging.info(f"从本地加载模型: {self.config['local_model_path']}")
